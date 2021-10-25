@@ -10,16 +10,16 @@ namespace rocks
     {
         static void Main(string[] args)
         {
-            int sum = 0;
-            int max = 0;
-            int half = 0;
-            int k = 0;
+            int sum = 0; 
+            int max = 0; 
+            int half = 0; 
+            int k = 0; 
 
-            Console.WriteLine("Напишите, какое количество камней нужно распределить в две максимально одинаковые кучки:");
+            Console.WriteLine("Какое количество камней нужно распределить в две максимально одинаковые кучи:");
             int num = Convert.ToInt32(Console.ReadLine());
-            while (num > 100 || num < 1)
+            while (num > 23 || num < 2) //проверка колличества камней
             {
-                Console.WriteLine("Введите число в диапазоне [1;100]:");
+                Console.WriteLine("Введите число в диапазоне от 2 до 23]:");
                 num = 0;
                 num = Convert.ToInt32(Console.ReadLine());
             }
@@ -29,7 +29,7 @@ namespace rocks
             // Забиваем массив
             for (int i = 0; i < num; i++)
             {
-                Console.WriteLine("Какой вес камня №{0}?", i + 1);
+                Console.WriteLine("Какой вес камня №{0}?", i + 1); //вес каждого камня и заполнение общей кучи
                 int a = Convert.ToInt32(Console.ReadLine());
                 arr[i] = a;
             }
